@@ -4,7 +4,7 @@ Lộc:Sơ đồ hoạt động
 
 Khoa :Sơ đồ tuần tự
 
-Nhật:Sơ đồ lớp
+Nhật:Sơ đồ lớp , thiết kế kiến trúc và giao diện, thiết kế chi tiết lớp và cơ sở dữ liệu
 
 Tài liệu tham khảo:
 
