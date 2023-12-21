@@ -1,4 +1,4 @@
-Phân tích thiết kế hệ thống thông tin - Nhóm 08
+Phân tích thiết kế hệ thống thông tin - Nhóm 07
 
 Cách cài đặt :
 
