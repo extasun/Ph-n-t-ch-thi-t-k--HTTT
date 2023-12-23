@@ -42,6 +42,7 @@
 					<!-- Collect the nav links, forms, and other content for toggling -->
 					<div class="collapse navbar-collapse re-navbar-collapse"
 						id="bs-example-navbar-collapse-1">
+						
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="${pageContext.servletContext.contextPath}/trangchu.htm"><span
 									class="glyphicon glyphicon-home" aria-hidden="true"></span>
@@ -60,7 +61,7 @@
 									<li><a href="${pageContext.servletContext.contextPath}/dangki.htm">Đăng kí</a></li>
 								</c:when>
 								<c:otherwise>
-									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin cá nhân</a></li>
+									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin</a></li>
 									<li><a href="${pageContext.servletContext.contextPath}/dangxuat.htm">Đăng xuất</a></li>
 								</c:otherwise>
 							</c:choose>
@@ -75,6 +76,11 @@
 		</div>
 
 		<div class="row">
+			<form role="search">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Tìm kiếm truyện tại đây">
+			</div>
+		</form>
 			<div class="panel panel-info">
 				<div class="panel-heading">
 					<h3 class="panel-title text-center">
@@ -130,7 +136,6 @@
 				</div>
 			</div>
 		</div>
-
 		<div class="row" id="footer">
 			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
@@ -139,7 +144,7 @@
 							class="glyphicon glyphicon-home" aria-hidden="true"></span> Địa
 						chỉ:  97 Man Thiện, P. Tăng Nhơn Phú A, Quận 9, TP. HCM.<br> <span
 							class="glyphicon glyphicon-phone" aria-hidden="true"></span> Điện
-						thoại: 0947025004<br> Copyright ©2022 - Design by minhhiule ---
+						thoại: 0778546733<br> Copyright ©2023 - Design by GROUP07 ---
 					</address>
 				</div>
 				<div class="clearfix"></div>
@@ -148,5 +153,19 @@
 	</div>
 	<script
 		src="<c:url value="/reesources/bootstrap/js/bootstrap.min.js"/>"></script>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('input[type="text"]').on('input', function () {
+                var searchTerm = $(this).val().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                $('.product_item').hide();
+                $('.product_item').filter(function () {
+                    // Chuyển đổi tên sản phẩm và từ khóa tìm kiếm về chữ thường và loại bỏ dấu
+                    var productName = $(this).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                    return productName.includes(searchTerm);
+                }).show();
+            });
+        });
+    </script>
 </body>
 </html>

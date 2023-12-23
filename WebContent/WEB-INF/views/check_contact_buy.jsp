@@ -60,7 +60,7 @@
 									<li><a href="${pageContext.servletContext.contextPath}/dangki.htm">Đăng kí</a></li>
 								</c:when>
 								<c:otherwise>
-									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin cá nhân</a></li>
+									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin</a></li>
 									<li><a href="${pageContext.servletContext.contextPath}/dangxuat.htm">Đăng xuất</a></li>
 								</c:otherwise>
 							</c:choose>
@@ -217,7 +217,7 @@
 							class="glyphicon glyphicon-home" aria-hidden="true"></span> Địa
 						chỉ: 97 Man Thiện, P. Tăng Nhơn Phú A, Quận 9, TP. HCM.<br> <span
 							class="glyphicon glyphicon-phone" aria-hidden="true"></span> Điện
-						thoại: 0947025004<br> Copyright ©2022 - Design by minhhiule ---
+						thoại: 0778546733<br> Copyright ©2023 - Design by GROUP07 ---
 					</address>
 				</div>
 				<div class="clearfix"></div>

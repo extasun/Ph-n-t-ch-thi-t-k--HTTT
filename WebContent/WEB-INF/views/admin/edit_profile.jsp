@@ -118,7 +118,7 @@
 							
 							<div class="form-group">
 							<p>Địa chỉ</p>
-								<input class="form-control" placeholder="11/29A, Đình Phong Phú" id = "address" name="address" type="text" value = "${myaccount.address }">
+								<input class="form-control" placeholder="97 Man Thiện, Hiệp Phú, Thủ Đức" id = "address" name="address" type="text" value = "${myaccount.address }">
 							</div>
 							
 							<div>

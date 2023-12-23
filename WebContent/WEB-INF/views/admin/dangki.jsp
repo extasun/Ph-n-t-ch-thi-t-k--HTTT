@@ -61,7 +61,7 @@
 							
 							<div class="form-group">
 							<p>Địa chỉ</p>
-								<input class="form-control" placeholder="11/29A, Đình Phong Phú" id = "address" name="address" type="text" autofocus="">
+								<input class="form-control" placeholder="97 Man Thiện, Hiệp Phú, Thủ Đức" id = "address" name="address" type="text" autofocus="">
 							</div>
 							
 							<div class="form-group">

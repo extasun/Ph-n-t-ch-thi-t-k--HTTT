@@ -155,7 +155,7 @@
 							
 							<div class="form-group">
 							<p>Hình ảnh sản phẩm</p>
-								<input class="form-control" id = "photo" name="photo" type="file" autofocus="">
+								<input class="form-control" id="photo" name="photo" type="file" accept="image/*" autofocus="">
 							</div>
 							
 							<div class="form-group">

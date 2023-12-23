@@ -60,7 +60,7 @@
 									<li><a href="${pageContext.servletContext.contextPath}/dangki.htm">Đăng kí</a></li>
 								</c:when>
 								<c:otherwise>
-									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin cá nhân</a></li>
+									<li><a href="${pageContext.servletContext.contextPath}/user/contact.htm">Thông tin</a></li>
 									<li><a href="${pageContext.servletContext.contextPath}/dangxuat.htm">Đăng xuất</a></li>
 								</c:otherwise>
 							</c:choose>

@@ -161,7 +161,7 @@
 							</c:choose>
 							<c:choose>
 								<c:when test="${batch.status==1}">
-									<p><span style="font-weight: bold;color: green">Còn hàng: ${batch.amount - batch.sold } Chiếc</span></p>
+									<p><span style="font-weight: bold;color: green">Còn hàng: ${batch.amount - batch.sold } quyển</span></p>
 								</c:when>
 								<c:when test="${batch.status==2}">
 									<p><span style="font-weight: bold;color: green">HẾT HÀNG</span></p>
