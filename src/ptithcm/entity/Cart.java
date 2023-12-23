@@ -76,7 +76,8 @@ public class Cart {
 	public Long sumPrice() {
 		Long price = this.batch.getPrice();
 		int discount = this.batch.getDiscount();
-		return (price - price*discount/100)*this.amount;
+		Long res=(price - price*discount/100)*this.amount;
+		return res;
 	}
 	
 	public String sumPriceToString() {

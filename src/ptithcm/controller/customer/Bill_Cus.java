@@ -67,11 +67,13 @@ public class Bill_Cus {
 				temp.setNameProduct(list.get(i).getBatch().getBatchName());
 				temp.setPhoto(list.get(i).getBatch().getPhoto());
 				temp.setSoluong(1);
-				temp.setThanhtien(list.get(i).getPrice()*1);
+				Long discountedPrice = list.get(i).getBatch().priceDiscount() * temp.getSoluong();
+				temp.setThanhtien(discountedPrice);
 				a.add(temp);
 			}else {
 				a.get(vitri).setSoluong(a.get(vitri).getSoluong()+1);
-				a.get(vitri).setThanhtien(list.get(i).getPrice()*a.get(vitri).getSoluong());
+				Long discountedPrice = list.get(i).getBatch().priceDiscount() * a.get(vitri).getSoluong();
+				a.get(vitri).setThanhtien(discountedPrice);
 			}
 		}
 		return a;

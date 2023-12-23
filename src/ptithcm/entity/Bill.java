@@ -159,7 +159,7 @@ public class Bill {
 	public Long sumMoney() {
 		Long sum = 0L;
 		for(Product e: this.products) {
-			sum = sum +e.getPrice().intValue();
+			sum = sum + e.getBatch().priceDiscount().intValue();
 		}
 		return sum;
 	}
