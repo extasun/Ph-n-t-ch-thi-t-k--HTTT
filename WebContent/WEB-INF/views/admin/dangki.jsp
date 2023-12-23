@@ -87,7 +87,7 @@
 										<div class="alert alert-warning" role="alert">Số điện thoại không hợp lệ</div>
 									</c:when>
 									<c:when test="${status_dangki_password==0}">
-										<div class="alert alert-warning" role="alert">Mật khẩu không hợp lệ</div>
+										<div class="alert alert-warning" role="alert">Mật khẩu không hợp lệ(ít nhất 8 kí tự)</div>
 									</c:when>
 									<c:when test="${errorUsername==1}">
 										<div class="alert alert-danger" role="alert">Username đã được đăng kí</div>

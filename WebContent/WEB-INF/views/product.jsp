@@ -122,7 +122,7 @@
 						  		</div>
 						  		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						  			<img src="<c:url value="/resources/upload/icon/ship.png"/>" alt="">
-						  			<p style="color:red">Trao hàng đúng hẹn</p>
+						  			<p style="color:red">Giao hàng đúng hẹn</p>
 						  		</div>
 						  		<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
 						  			<img src="<c:url value="/resources/upload/icon/services.png"/>" alt="">
