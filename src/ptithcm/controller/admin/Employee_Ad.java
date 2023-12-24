@@ -89,7 +89,7 @@ public class Employee_Ad {
 		Account account = new Account();
 		account.setAccountId(accountId);
 		account.setEmail(email);
-		account.setRole((Role) session.get(Role.class, 1));
+		account.setRole((Role) session.get(Role.class, 2));
 		account.setName(fullname);
 		account.setAddress(address);
 		account.setPhone(phone);
