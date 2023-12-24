@@ -68,27 +68,27 @@
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/index.htm"><svg
 						class="glyph stroked dashboard-dial">
-						<use xlink:href="#stroked-dashboard-dial"></use></svg> Dashboard</a></li>
+						<use xlink:href="#stroked-dashboard-dial"></use></svg>Trang chủ</a></li>
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/listbill.htm"><svg
 						class="glyph stroked bag">
-						<use xlink:href="#stroked-bag"></use></svg> Order List</a></li>
+						<use xlink:href="#stroked-bag"></use></svg>Đơn hàng</a></li>
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/listuser.htm"><svg
 						class="glyph stroked male user ">
-						<use xlink:href="#stroked-male-user" /></svg> User List</a></li>
+						<use xlink:href="#stroked-male-user" /></svg>Danh sách tài khoản</a></li>
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/listproduct.htm"><svg
 						class="glyph stroked mobile device">
-						<use xlink:href="#stroked-mobile-device" /></svg> Product List</a></li>
+						<use xlink:href="#stroked-mobile-device" /></svg>Danh sách sản phẩm</a></li>
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/newproduct.htm"><svg
 						class="glyph stroked pencil">
-						<use xlink:href="#stroked-pencil"></use></svg> New Batch of Products</a></li>
+						<use xlink:href="#stroked-pencil"></use></svg>Thêm sản phẩm</a></li>
 			<li><a
 				href="${pageContext.servletContext.contextPath}/admin/newaccount.htm"><svg
 						class="glyph stroked app-window">
-						<use xlink:href="#stroked-app-window"></use></svg> New Account Employee</a></li>
+						<use xlink:href="#stroked-app-window"></use></svg>Thêm tài khoản</a></li>
 			<li class="parent "><a
 				href="${pageContext.servletContext.contextPath}/admin/profile.htm">
 					<span data-toggle="collapse" href="#sub-item-1"><svg
