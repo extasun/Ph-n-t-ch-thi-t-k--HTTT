@@ -60,9 +60,9 @@
 
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
+		    <div class="form-group">
+		        <input type="text" class="form-control" id="searchInput" placeholder="Search">
+		    </div>
 		</form>
 		<ul class="nav menu">
 			<li><a
@@ -167,34 +167,22 @@
 										<th>Edit</th>
 									</thead>
 									<tbody>
-										<%!int k = 1;%>
-										<c:forEach var="batch" items="${listProduct }">
-
-											<tr>
-												<td>
-													<%
-														out.print(k++);
-													%>
-												</td>
-												<td>${batch.batchName}</td>
-												<td>${batch.amount }</td>
-												<td><img
-													src="${pageContext.servletContext.contextPath}/resources/upload/product/${batch.photo }"
-													class="img-thumbnail" alt="" style="width: 50px;"></td>
-												<td>${batch.sold }</td>
-												<td>${batch.priceDiscountToString() }VNĐ</td>
-												<td><a
-													href="${pageContext.servletContext.contextPath}/admin/batch/${batch.batchId }.htm"><span
-														class="glyphicon glyphicon-inbox" aria-hidden="true"></span></a></td>
-														<td><a
-													href="${pageContext.servletContext.contextPath}/admin/editbatch/${batch.batchId }.htm"><span
-														class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
-											</tr>
-										</c:forEach>
-										<%
-											k = 1;
-										%>
+									    <% int k = 1; %>
+									    <c:forEach var="batch" items="${listProduct}">
+									        <tr>
+									            <td><% out.print(k++); %></td>
+									            <td>${batch.batchName}</td>
+									            <td>${batch.amount}</td>
+									            <td><img src="${pageContext.servletContext.contextPath}/resources/upload/product/${batch.photo}" class="img-thumbnail" alt="" style="width: 50px;"></td>
+									            <td>${batch.sold}</td>
+									            <td>${batch.priceDiscountToString()}VNĐ</td>
+									            <td><a href="${pageContext.servletContext.contextPath}/admin/batch/${batch.batchId}.htm"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span></a></td>
+									            <td><a href="${pageContext.servletContext.contextPath}/admin/editbatch/${batch.batchId}.htm"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span></a></td>
+									        </tr>
+									    </c:forEach>
+									    <% k = 1; %>
 									</tbody>
+
 								</table>
 								<a class="btn btn-success"
 									href="${pageContext.servletContext.contextPath}/admin/newproduct.htm">Thêm
@@ -244,5 +232,19 @@
 		})
 	</script>
 </body>
+<script>
+    $(document).ready(function () {
+        $('input[type="text"]').on('input', function () {
+            var searchTerm = $(this).val().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            $('tbody tr').hide();
+            $('tbody tr').filter(function () {
+                // Chuyển đổi tên sản phẩm và từ khóa tìm kiếm về chữ thường và loại bỏ dấu
+                var productName = $(this).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                return productName.includes(searchTerm);
+            }).show();
+        });
+    });
+</script>
+
 
 </html>

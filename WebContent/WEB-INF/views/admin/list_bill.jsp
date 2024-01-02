@@ -44,10 +44,11 @@
 		
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<form role="search">
-			<div class="form-group">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
+		    <div class="form-group">
+		        <input type="text" class="form-control" placeholder="Tìm kiếm theo thông tin bất kì">
+		    </div>
 		</form>
+
 		<ul class="nav menu">
 			<li><a href="${pageContext.servletContext.contextPath}/admin/index.htm"><svg class="glyph stroked dashboard-dial"><use xlink:href="#stroked-dashboard-dial"></use></svg>Trang chủ</a></li>
 			<li class="active"><a href="${pageContext.servletContext.contextPath}/admin/listbill.htm"><svg class="glyph stroked bag"><use xlink:href="#stroked-bag"></use></svg>Đơn Hàng</a></li>
@@ -98,6 +99,7 @@
 								<thead>
 									<th>STT</th>
 									<th>Mã Đơn Hàng</th>
+									<th>Tên Khách Hàng</th>
 									<th>Thời Gian</th>
 									<th>Phương thức thanh toán</th>
 									<th>Thành tiền</th>
@@ -105,17 +107,20 @@
 								</thead>
 								<tbody>
 								<%! int j = 1;%>
-								<c:forEach var="bill" items="${listBill }">
-								
-									<tr>
-										<td><% out.print(j++); %></td>
-										<td>${bill.billId}</td>
-										<td>${bill.date }</td>
-										<td>${bill.payment_Methods.paymentName }</td>
-										<td>${bill.sumMoneyToString() } VNĐ</td>
-										<td><a href="${pageContext.servletContext.contextPath}/admin/bill/${bill.billId }.htm"><span class="glyphicon glyphicon-inbox" aria-hidden="true"></span></a></td>
-									</tr>
-								</c:forEach>
+								<c:forEach var="bill" items="${listBill}">
+							        <tr class="bill_item"> <!-- Thêm class "bill_item" -->
+							            <td><% out.print(j++); %></td>
+							            <td>${bill.billId}</td>
+							            <td>${bill.customerName}</td>
+							            <td>${bill.date }</td>
+							            <td>${bill.payment_Methods.paymentName }</td>
+							            <td>${bill.sumMoneyToString() } VNĐ</td>
+							            <td><a href="${pageContext.servletContext.contextPath}/admin/bill/${bill.billId}.htm">
+							                    <span class="glyphicon glyphicon-inbox" aria-hidden="true"></span>
+							                </a>
+							            </td>
+							        </tr>
+							    </c:forEach>
 									<% j=1; %>
 								</tbody>
 							</table>
@@ -156,5 +161,19 @@
 		})
 	</script>	
 </body>
+<script>
+    $(document).ready(function () {
+        $('input[type="text"]').on('input', function () {
+            var searchTerm = $(this).val().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            $('.bill_item').hide();
+            $('.bill_item').filter(function () {
+                // Chuyển đổi thông tin đơn hàng về chữ thường và loại bỏ dấu
+                var billInfo = $(this).text().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+                return billInfo.includes(searchTerm);
+            }).show();
+        });
+    });
+</script>
+
 
 </html>

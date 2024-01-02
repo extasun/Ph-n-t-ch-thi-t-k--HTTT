@@ -142,7 +142,6 @@ public class Cart_Cus {
 				}else if(type.equals("add")) {
 					Batch batch = cart.getBatch();
 					if(cart.getAmount()>=(batch.getAmount()-batch.getSold())) {
-						
 					}else {
 						cart.setAmount(cart.getAmount()+1);
 						session.update(cart);

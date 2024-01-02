@@ -98,7 +98,7 @@
 						<fieldset>
 							<div class="form-group">
 							<p>Username</p>
-								<input disabled="disabled" class="form-control" placeholder="nguyenvana" id = "username" name="username" type="text" value = "${myaccount.accountId }">
+								<input class="form-control" placeholder="nguyenvana" id = "username" name="username" type="text" value = "${myaccount.accountId }">
 							</div>
 							
 							<div class="form-group">

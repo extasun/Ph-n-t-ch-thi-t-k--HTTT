@@ -20,7 +20,7 @@
 		<div class="row" style="margin-top: 3px; height: 125px">
 			<div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 clearpadding">
 				<a href="${pageContext.servletContext.contextPath}/trangchu.htm"><img width = 800px; style="margin-left: 100%;"
-					src="<c:url value="/resources/upload/ptit.webp"/>" alt=""
+					src="<c:url value="/resources/upload/logo1.png"/>" alt=""
 					class="img-responsive imglogo"></a>
 			</div>
 		</div>
